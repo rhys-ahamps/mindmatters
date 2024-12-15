@@ -29,6 +29,21 @@
             text-decoration: none;
             color: white;
             font-size: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .menu-bar a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease-in-out;
+        }
+        .menu-bar a:hover::after {
+            width: 100%;
         }
         .content {
             margin: 80px auto;
@@ -63,6 +78,7 @@
     <div class="menu-bar">
         <a href="index.html" class="menu-link">Home</a>
         <a href="about.html" class="menu-link">About</a>
+        <a href="https://donate.stripe.com/test_14k6po9cy5ycepqdQQ" class="menu-link" target="_blank">Donate</a>
     </div>
     <div class="content">
         <div class="section">
