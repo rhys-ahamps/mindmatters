@@ -19,28 +19,32 @@
             color: #333;
         }
         .logo {
-            margin: 20px auto;
+            margin: 10px auto;
         }
         .logo img {
-            width: 150px;
-            height: 150px;
+            width: 250px;
+            height: 250px;
             display: block;
             margin: 0 auto;
         }
         .message {
-            margin: 20px 0;
+            margin: 10px 0;
             font-size: 1.2rem;
         }
-        .instagram {
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .buttons a {
             display: flex;
             align-items: center;
-            margin-top: 20px;
-            font-size: 1rem;
+            text-decoration: none;
+            color: inherit;
         }
-        .instagram img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
+        .buttons img {
+            width: 40px;
+            height: 40px;
         }
     </style>
 </head>
@@ -52,11 +56,13 @@
     <div class="message">
         Our website is currently under development. Come back soon for updates.
     </div>
-    <div class="instagram">
+    <div class="buttons">
         <a href="https://www.instagram.com/mindmatters_foundation/" target="_blank">
             <img src="https://static-00.iconduck.com/assets.00/instagram-with-circle-icon-2048x2048-21sdb59c.png" alt="Instagram Logo">
         </a>
-        <span>@mindmatters_foundation</span>
+        <a href="https://www.linkedin.com/company/mindmatters-foundation/" target="_blank">
+            <img src="https://static-00.iconduck.com/assets.00/linkedin-with-circle-icon-1024x1024-m0epmra3.png" alt="LinkedIn Logo">
+        </a>
     </div>
 </body>
 </html>
