@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Mind Matters</title>
+    <title>Mind Matters Home Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
             color: #333;
-            line-height: 1.6;
+            overflow: hidden;
+            background: #000;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .hidden {
+            opacity: 0;
         }
         .menu-bar {
             position: fixed;
@@ -30,32 +40,49 @@
             color: white;
             font-size: 1rem;
         }
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .background-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .content {
-            margin: 80px auto;
-            max-width: 800px;
-            padding: 20px;
+            position: relative;
+            z-index: 1;
             text-align: center;
         }
-        .section {
-            margin-bottom: 40px;
+        .logo {
+            margin: 20px 0;
         }
-        .gray-placeholder {
-            width: 200px;
-            height: 200px;
-            background: gray;
-            margin: 20px auto;
+        .logo img {
+            width: 250px;
+            height: 250px;
         }
-        h1, h2 {
-            color: #444;
-            font-size: 2rem;
-            margin-bottom: 20px;
+        .message {
+            margin: 20px 0;
+            font-size: 1.2rem;
         }
-        h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
         }
-        p {
-            text-align: center;
+        .buttons a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+        .buttons img {
+            width: 40px;
+            height: 40px;
         }
     </style>
 </head>
@@ -64,18 +91,46 @@
         <a href="index.html" class="menu-link">Home</a>
         <a href="about.html" class="menu-link">About</a>
     </div>
+    <div class="background-video">
+        <video autoplay muted loop playsinline>
+            <source src="backgroundwebsite.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <div class="content">
-        <div class="section">
-            <h1>Our Mission</h1>
-            <p>Placeholder text about the mission of the organization. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula leo in malesuada posuere.</p>
+        <h1>Welcome to the Mind Matters Home Page</h1>
+        <div class="logo">
+            <img src="MindMattersLogo_Upload.png" alt="Mind Matters Logo">
         </div>
-        <div class="section">
-            <h1>The Team</h1>
-            <h3>Founder</h3>
-            <div class="gray-placeholder"></div>
-            <h3>Rhys Ahamparam</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="message">
+            Our website is currently under development. Come back soon for updates.
+        </div>
+        <div class="buttons">
+            <a href="https://www.instagram.com/mindmatters_foundation/" target="_blank">
+                <img src="https://static-00.iconduck.com/assets.00/instagram-with-circle-icon-2048x2048-21sdb59c.png" alt="Instagram Logo">
+            </a>
+            <a href="https://www.linkedin.com/company/mindmatters-foundation/" target="_blank">
+                <img src="https://static-00.iconduck.com/assets.00/linkedin-with-circle-icon-1024x1024-m0epmra3.png" alt="LinkedIn Logo">
+            </a>
         </div>
     </div>
+    <script>
+        // Smooth transition between pages
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default navigation
+                const target = this.href; // Get the target URL
+                document.body.classList.add('hidden'); // Trigger fade-out effect
+                setTimeout(() => {
+                    window.location.href = target; // Navigate after fade-out
+                }, 500); // Match the fade-out duration
+            });
+        });
+
+        // Ensure a seamless fade-in effect on load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.remove('hidden');
+        });
+    </script>
 </body>
 </html>
