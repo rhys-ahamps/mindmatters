@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Matters Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            color: #333;
+            overflow: hidden;
+            background: #000;
+        }
+        .menu-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            color: black;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 2;
+        }
+        .menu-bar > a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: black;
+            font-size: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .menu-bar a:hover .dropdown {
+            display: block;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            padding: 10px 0;
+            white-space: nowrap;
+        }
+        .dropdown a {
+            display: block;
+            padding: 5px 20px;
+            text-decoration: none;
+            color: black;
+        }
+        .dropdown a:hover {
+            background-color: #f0f0f0;
+        }
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .background-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .logo {
+            margin: 20px 0;
+        }
+        .logo img {
+            width: 250px;
+            height: 250px;
+        }
+        .message {
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .buttons a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+        .buttons img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <a href="index.html" class="menu-link">Home</a>
+        <a href="#">About
+            <div class="dropdown">
+                <a href="ourstory.html">Our Story</a>
+                <a href="ourteam.html">Our Team</a>
+            </div>
+        </a>
+    </div>
+    <div class="background-video">
+        <video autoplay muted loop playsinline>
+            <source src="backgroundwebsite.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="content">
+        <h1>Welcome to the Mind Matters Home Page</h1>
+        <div class="logo">
+            <img src="MindMattersLogo_Upload.png" alt="Mind Matters Logo">
+        </div>
+        <div class="message">
+            Our website is currently under development. Come back soon for updates.
+        </div>
+        <div class="buttons">
+            <a href="https://www.instagram.com/mindmatters_foundation/" target="_blank">
+                <img src="https://static-00.iconduck.com/assets.00/instagram-with-circle-icon-2048x2048-21sdb59c.png" alt="Instagram Logo">
+            </a>
+            <a href="https://www.linkedin.com/company/mindmatters-foundation/" target="_blank">
+                <img src="https://static-00.iconduck.com/assets.00/linkedin-with-circle-icon-1024x1024-m0epmra3.png" alt="LinkedIn Logo">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
