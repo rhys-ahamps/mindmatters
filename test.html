@@ -7,16 +7,16 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
             color: #333;
             overflow: hidden;
+            background: #000;
         }
         .background-video {
             position: fixed;
@@ -25,35 +25,28 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-        }
-        .background-video iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            pointer-events: none;
+            background-size: cover;
         }
         .content {
             position: relative;
             z-index: 1;
+            text-align: center;
         }
         .logo {
-            margin: 10px auto;
+            margin: 20px 0;
         }
         .logo img {
             width: 250px;
             height: 250px;
-            display: block;
-            margin: 0 auto;
         }
         .message {
-            margin: 10px 0;
+            margin: 20px 0;
             font-size: 1.2rem;
         }
         .buttons {
             display: flex;
             gap: 20px;
             justify-content: center;
-            margin-bottom: 20px;
         }
         .buttons a {
             display: flex;
@@ -68,9 +61,7 @@
     </style>
 </head>
 <body>
-    <div class="background-video">
-        <iframe src="https://www.youtube.com/embed/EmrGsGFS5KM?autoplay=1&mute=1&loop=1&playlist=EmrGsGFS5KM&controls=0&modestbranding=1&showinfo=0" title="Cloud Heaven Copyrights Free Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+    <div class="background-video" style="background: url('backgroundwebsite.mp4') no-repeat center center / cover;"></div>
     <div class="content">
         <h1>Welcome to the Mind Matters Home Page</h1>
         <div class="logo">
@@ -79,14 +70,14 @@
         <div class="message">
             Our website is currently under development. Come back soon for updates.
         </div>
-    </div>
-    <div class="buttons">
-        <a href="https://www.instagram.com/mindmatters_foundation/" target="_blank">
-            <img src="https://static-00.iconduck.com/assets.00/instagram-with-circle-icon-2048x2048-21sdb59c.png" alt="Instagram Logo">
-        </a>
-        <a href="https://www.linkedin.com/company/mindmatters-foundation/" target="_blank">
-            <img src="https://static-00.iconduck.com/assets.00/linkedin-with-circle-icon-1024x1024-m0epmra3.png" alt="LinkedIn Logo">
-        </a>
+        <div class="buttons">
+            <a href="https://www.instagram.com/mindmatters_foundation/" target="_blank">
+                <img src="https://static-00.iconduck.com/assets.00/instagram-with-circle-icon-2048x2048-21sdb59c.png" alt="Instagram Logo">
+            </a>
+            <a href="https://www.linkedin.com/company/mindmatters-foundation/" target="_blank">
+                <img src="https://static-00.iconduck.com/assets.00/linkedin-with-circle-icon-1024x1024-m0epmra3.png" alt="LinkedIn Logo">
+            </a>
+        </div>
     </div>
 </body>
 </html>
