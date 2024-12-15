@@ -29,7 +29,7 @@
             padding: 10px 0;
             z-index: 2;
         }
-        .menu-bar > a {
+        .menu-bar a {
             margin: 0 20px;
             text-decoration: none;
             color: black;
@@ -37,7 +37,11 @@
             position: relative;
             display: inline-block;
         }
-        .menu-bar a:hover .dropdown {
+        .menu-item {
+            position: relative;
+            display: inline-block;
+        }
+        .menu-item:hover .dropdown {
             display: block;
         }
         .dropdown {
@@ -50,6 +54,7 @@
             text-align: left;
             padding: 10px 0;
             white-space: nowrap;
+            z-index: 999;
         }
         .dropdown a {
             display: block;
@@ -109,12 +114,13 @@
 <body>
     <div class="menu-bar">
         <a href="index.html" class="menu-link">Home</a>
-        <a href="#">About
+        <div class="menu-item">
+            <a href="#" class="menu-link">About</a>
             <div class="dropdown">
                 <a href="ourstory.html">Our Story</a>
                 <a href="ourteam.html">Our Team</a>
             </div>
-        </a>
+        </div>
     </div>
     <div class="background-video">
         <video autoplay muted loop playsinline>
