@@ -18,6 +18,23 @@
             overflow: hidden;
             background: #000;
         }
+        .menu-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 2;
+        }
+        .menu-bar a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
         .background-video {
             position: fixed;
             top: 0;
@@ -25,7 +42,11 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background-size: cover;
+        }
+        .background-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .content {
             position: relative;
@@ -61,8 +82,12 @@
     </style>
 </head>
 <body>
+    <div class="menu-bar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+    </div>
     <div class="background-video">
-        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+        <video autoplay muted loop playsinline>
             <source src="backgroundwebsite.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
