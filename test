@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Matters Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .logo {
+            width: 150px;
+            height: 150px;
+            background-color: #ccc;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .message {
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+        .instagram {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+        .instagram img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Mind Matters Home Page</h1>
+    <div class="logo">
+        <!-- Placeholder for logo -->
+        <p>Logo</p>
+    </div>
+    <div class="message">
+        Our website is currently under development. Come back soon for updates.
+    </div>
+    <div class="instagram">
+        <img src="https://via.placeholder.com/24" alt="Instagram Logo">
+        <span>@placeholder_handle</span>
+    </div>
+</body>
+</html>
